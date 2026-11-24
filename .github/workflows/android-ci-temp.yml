@@ -1,0 +1,45 @@
+# Temporary one-off CI for the android voice input work. Deleted once it passes.
+name: android ci (temp)
+
+on:
+  push:
+    branches: [android-voice-input-ci]
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - name: Install Android SDK packages
+        run: |
+          sdkmanager="${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager"
+          yes | "$sdkmanager" --licenses > /dev/null
+          "$sdkmanager" --install "platforms;android-36" "build-tools;35.0.0" "ndk;27.2.12479018" "cmake;3.22.1"
+      - name: Build and test
+        working-directory: android
+        run: ./gradlew --no-daemon --console=plain :app:testDebugUnitTest :app:compileDebugKotlin :app:assembleDebug
+      - name: Unit test results
+        if: always()
+        run: |
+          python3 - <<'EOF'
+          import glob
+          import xml.etree.ElementTree as ET
+
+          total = failures = errors = skipped = 0
+          rows = []
+          for path in sorted(glob.glob("android/app/build/test-results/testDebugUnitTest/TEST-*.xml")):
+              root = ET.parse(path).getroot()
+              counts = [int(root.get(key, 0)) for key in ("tests", "failures", "errors", "skipped")]
+              total += counts[0]
+              failures += counts[1]
+              errors += counts[2]
+              skipped += counts[3]
+              rows.append("%s: %d tests, %d failures, %d errors" % (root.get("name"), counts[0], counts[1], counts[2]))
+          print("\n".join(rows))
+          print("%d tests, %d failures, %d errors, %d skipped" % (total, failures, errors, skipped))
+          EOF
