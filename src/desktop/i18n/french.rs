@@ -418,7 +418,6 @@ const TRANSLATIONS: &[(&str, &str)] = &[
     ("Recommended", "Recommandé"),
     ("Settings", "Réglages"),
     ("General", "Général"),
-    ("Experiments", "Expériences"),
     ("Voice Filter", "Filtre vocal"),
     ("Recordings", "Enregistrements"),
     ("Advanced", "Avancé"),
