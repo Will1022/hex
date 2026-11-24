@@ -167,3 +167,28 @@ pub(super) const RUSSIAN: &[(&str, &str)] = &[
     ("Export size", "Размер экспорта"),
     ("Pause", "Пауза"),
 ];
+
+#[rustfmt::skip]
+pub(super) const HUNGARIAN: &[(&str, &str)] = &[
+    ("Scale Retina to 1x", "Retina méretezése 1x-re"),
+    ("Max resolution", "Max. felbontás"),
+    ("Frame rate", "Képkockasebesség"),
+    ("Quality", "Minőség"),
+    ("30 fps", "30 fps"),
+    ("60 fps", "60 fps"),
+    ("High", "Magas"),
+    ("Medium", "Közepes"),
+    ("Low", "Alacsony"),
+    ("1440p", "1440p"),
+    ("1080p", "1080p"),
+    ("720p", "720p"),
+    ("Full screen", "Teljes képernyő"),
+    ("No microphone", "Nincs mikrofon"),
+    ("Computer audio", "Számítógép hangja"),
+    ("Options", "Opciók"),
+    ("Same as dictation", "Ugyanaz, mint a diktálásnál"),
+    ("Record computer audio", "A számítógép hangjának felvétele"),
+    ("Display {}", "Kijelző {}"),
+    ("Export size", "Exportálási méret"),
+    ("Pause", "Szüneteltetés"),
+];

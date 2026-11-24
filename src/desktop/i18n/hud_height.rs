@@ -38,3 +38,13 @@ pub(super) const RUSSIAN: &[(&str, &str)] = &[
     ("Lower", "Ниже"),
     ("Raise", "Выше"),
 ];
+
+#[rustfmt::skip]
+pub(super) const HUNGARIAN: &[(&str, &str)] = &[
+    ("HUD height", "HUD magassága"),
+    ("Choose how high the dictation HUD sits above the Dock when it's at the bottom", "Válaszd ki, milyen magasan legyen a diktálás HUD-ja a Dock fölött, amikor alul van"),
+    ("Height", "Magasság"),
+    ("{} pt", "{} pt"),
+    ("Lower", "Lejjebb"),
+    ("Raise", "Feljebb"),
+];

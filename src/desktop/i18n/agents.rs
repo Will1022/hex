@@ -93,3 +93,25 @@ pub(super) const RUSSIAN: &[(&str, &str)] = &[
     ("Install agent skill from Annotate", "Установка навыка агента из Annotate"),
     ("Adds an Agents section to the Annotate pane that writes the hex-annotate skill into Claude Code, Codex, OpenCode, or Pi, and on macOS links hex onto PATH", "Добавляет раздел «Агенты» на панель Annotate, который записывает навык hex-annotate в Claude Code, Codex, OpenCode или Pi, а на macOS добавляет hex в PATH"),
 ];
+
+#[rustfmt::skip]
+pub(super) const HUNGARIAN: &[(&str, &str)] = &[
+    ("Agents", "Ügynökök"),
+    ("Let coding agents read your captures with the hex-annotate skill", "Engedd, hogy a kódoló ügynökök a hex-annotate skill-lel olvassák a felvételeidet"),
+    ("Not found", "Nem található"),
+    ("Installed", "Telepítve"),
+    ("Update available", "Frissítés érhető el"),
+    ("Managed elsewhere", "Máshol kezelve"),
+    ("Install with the skills CLI", "Telepítés a skills CLI-vel"),
+    ("For skills you manage yourself", "A magad által kezelt skillekhez"),
+    ("Command-line tool", "Parancssori eszköz"),
+    ("Installed at {}", "Telepítve ide: {}"),
+    ("Owned by another program", "Egy másik programhoz tartozik"),
+    ("{} isn't on your PATH", "A(z) {} nincs a PATH-ban"),
+    ("Move Hex to Applications first", "Előbb helyezd át a Hexet az Applications mappába"),
+    ("The skill's zoom, inspect, and frames commands need Labs › Agent tools for captures on", "A skill zoom, inspect és frames parancsaihoz be kell kapcsolni a Labs › Ügynök-eszközök a felvételekhez lehetőséget"),
+    ("Couldn't install the skill: {}", "A skillt nem sikerült telepíteni: {}"),
+    ("Couldn't link the command-line tool: {}", "A parancssori eszközt nem sikerült linkelni: {}"),
+    ("Install agent skill from Annotate", "Ügynök-skill telepítése a Jegyzetelésből"),
+    ("Adds an Agents section to the Annotate pane that writes the hex-annotate skill into Claude Code, Codex, OpenCode, or Pi, and on macOS links hex onto PATH", "Ügynökök szakaszt ad a Jegyzetelés panelhez, amely beírja a hex-annotate skillt a Claude Code-ba, a Codexbe, az OpenCode-ba vagy a Pibe, macOS-en pedig a hexet a PATH-ra linkeli"),
+];

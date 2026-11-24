@@ -86,3 +86,19 @@ pub(super) const RUSSIAN: &[(&str, &str)] = &[
     ("Style", "Стиль"),
     ("After the rewrite", "После переписывания"),
 ];
+
+#[rustfmt::skip]
+pub(super) const HUNGARIAN: &[(&str, &str)] = &[
+    ("Dictation style", "Diktálási stílus"),
+    ("Format every dictation as Polished, Casual, Notes, or Verbatim, like the iPhone app, without an AI model", "Minden diktálást Irodalmi, Hétköznapi, Jegyzet vagy Szó szerinti formára hoz, mint az iPhone-alkalmazásban, AI-modell nélkül"),
+    ("Polished", "Irodalmi"),
+    ("Casual", "Hétköznapi"),
+    ("Notes", "Jegyzet"),
+    ("Verbatim", "Szó szerinti"),
+    ("Full sentences, fillers trimmed", "Teljes mondatok, töltelékszavak nélkül"),
+    ("Texting: lowercase start, no final period", "Üzenetküldés: kisbetűs kezdés, záró pont nélkül"),
+    ("Short lines, a list for several items", "Rövid sorok, több elemnél lista"),
+    ("Exact words from the model", "A modell pontos szavai"),
+    ("Style", "Stílus"),
+    ("After the rewrite", "Az átfogalmazás után"),
+];

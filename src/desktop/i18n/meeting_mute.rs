@@ -56,3 +56,12 @@ pub(super) const RUSSIAN: &[(&str, &str)] = &[
     ("Unmute microphone", "Включить микрофон"),
     ("Microphone muted", "Микрофон выключен"),
 ];
+
+#[rustfmt::skip]
+pub(super) const HUNGARIAN: &[(&str, &str)] = &[
+    ("Mute the microphone while recording", "A mikrofon némítása felvétel közben"),
+    ("Adds a mute button to meeting recordings. Hex keeps recording the call's audio but leaves out your microphone until you unmute.", "Némítás gombot ad a megbeszélés-felvételeihez. A Hex továbbra is rögzíti a hívás hangját, de a mikrofonodat kihagyja, amíg vissza nem kapcsolod."),
+    ("Mute microphone", "Mikrofon némítása"),
+    ("Unmute microphone", "Mikrofon némításának feloldása"),
+    ("Microphone muted", "A mikrofon némítva"),
+];

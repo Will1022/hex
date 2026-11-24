@@ -4,10 +4,12 @@
 use super::{FRENCH_COLUMN, PORTUGUESE_COLUMN, RUSSIAN_COLUMN, column_for_code, current};
 
 /// Whether the active language writes a decimal fraction with a comma:
-/// German, Spanish, French, Polish, Portuguese, Russian, and Ukrainian.
+/// German, Hungarian, Spanish, French, Polish, Portuguese, Russian, and
+/// Ukrainian.
 pub(crate) fn decimal_comma() -> bool {
     let column = current();
     column == column_for_code("de")
+        || column == column_for_code("hu")
         || column == column_for_code("es")
         || column == column_for_code("pl")
         || column == column_for_code("uk")
@@ -42,6 +44,7 @@ fn thousands_separator() -> &'static str {
         "."
     } else if column == column_for_code("pl")
         || column == column_for_code("uk")
+        || column == column_for_code("hu")
         || column == FRENCH_COLUMN
         || column == RUSSIAN_COLUMN
     {
@@ -70,6 +73,7 @@ mod tests {
             ("de", true),
             ("es", true),
             ("fr", true),
+            ("hu", true),
             ("pl", true),
             ("pt", true),
             ("ru", true),
@@ -94,6 +98,7 @@ mod tests {
             ("es", "1.284"),
             ("pt", "1.284"),
             ("fr", "1\u{202f}284"),
+            ("hu", "1\u{202f}284"),
             ("pl", "1\u{202f}284"),
             ("ru", "1\u{202f}284"),
             ("uk", "1\u{202f}284"),
